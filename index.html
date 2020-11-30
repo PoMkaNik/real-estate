@@ -13,27 +13,74 @@
 
 <body>
 
-  <div class="showcase">
-    <div class="ui secondary top fixed stackable menu">
-      <div class="item">
-
+  <div class="ui grid container">
+    <div class="computer tablet only row">
+      <div class="column">
+        <nav class="ui secondary top fixed stackable menu" id="main-menu">
+          <div class="item">
+            <img class="ui tiny image" src="img/logo_small.jpg" alt="logo">
+          </div>
+          <div class="right menu">
+            <a class="item header active" href="index.html">Home</a>
+            <a class="item" href="#!">Properties</a>
+            <a class="item" href="#!">About</a>
+            <a class="item" href="#!">Blog</a>
+            <a class="item" href="#!">Contact</a>
+            <div class="item">
+              <button class="ui big button">Create Listing</button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="mobile only row">
+      <div class="column">
+        <div class="ui secondary top fixed stackable menu">
+          <a id="mobile-menu-toggler" class="item"><i class="bars icon"></i></a>
+        </div>
       </div>
     </div>
   </div>
 
-
-  <footer>
-
-    <div class="atribution">
-      <a href='https://www.freepik.com/vectors/logo'>Logo vector created by d3images - www.freepik.com</a>
+  <!-- sidebar -->
+  <div class="ui sidebar vertical menu" id="mobile-menu">
+    <a class="item header active" href="index.html">Home</a>
+    <a class="item" href="#!">Properties</a>
+    <a class="item" href="#!">About</a>
+    <a class="item" href="#!">Blog</a>
+    <a class="item" href="#!">Contact</a>
+    <div class="item">
+      <button class="ui big button">Create Listing</button>
     </div>
-  </footer>
+  </div>
+  <div class="pusher">
+    <div id="content">
+      <!-- all content goes here -->
+      <div class="showcase">
+        <div class="showcase__header">
+          <h1>Where Dreams Come Home</h1>
+          <h3>Fulfilling the Dream of Home Since 1906</h3>
+        </div>
+      </div>
+
+      <footer>
+        <div class="attribution">
+          <a href='https://www.freepik.com/vectors/logo'>Logo vector created by d3images - www.freepik.com</a>
+        </div>
+      </footer>
+    </div> <!-- /content -->
+  </div>
+
+
+
 
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <!-- semantic ui js -->
   <script src="semantic/dist/semantic.min.js"></script>
+  <!-- custom js -->
+  <script src="js/main.js"></script>
 </body>
 
 </html>
