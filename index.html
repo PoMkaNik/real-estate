@@ -17,17 +17,19 @@
     <div class="computer tablet only row">
       <div class="column">
         <nav class="ui secondary top fixed stackable menu" id="main-menu">
-          <div class="item">
-            <img class="ui tiny image" src="img/logo_small.jpg" alt="logo">
-          </div>
-          <div class="right menu">
-            <a class="item header active" href="index.html">Home</a>
-            <a class="item" href="#!">Properties</a>
-            <a class="item" href="#!">About</a>
-            <a class="item" href="#!">Blog</a>
-            <a class="item" href="#!">Contact</a>
+          <div class="ui container">
             <div class="item">
-              <button class="ui big button">Create Listing</button>
+              <img class="ui tiny image" src="img/logo_small.jpg" alt="logo">
+            </div>
+            <div class="right menu">
+              <a class="item header active" href="index.html">Home</a>
+              <a class="item" href="#!">Properties</a>
+              <a class="item" href="#!">About</a>
+              <a class="item" href="#!">Blog</a>
+              <a class="item" href="#!">Contact</a>
+              <div class="item">
+                <button class="ui big button btn btn--primary">Create Listing</button>
+              </div>
             </div>
           </div>
         </nav>
@@ -50,16 +52,170 @@
     <a class="item" href="#!">Blog</a>
     <a class="item" href="#!">Contact</a>
     <div class="item">
-      <button class="ui big button">Create Listing</button>
+      <button class="ui big button btn btn--primary">Create Listing</button>
     </div>
   </div>
   <div class="pusher">
     <div id="content">
       <!-- all content goes here -->
+      <!-- === === === -->
+
+      <!-- showcase -->
       <div class="showcase">
-        <div class="showcase__header">
-          <h1>Where Dreams Come Home</h1>
-          <h3>Fulfilling the Dream of Home Since 1906</h3>
+        <div class="showcase__outline showcase__outline--header"></div>
+        <div class="showcase__outline showcase__outline--filter"></div>
+        <div class="ui container showcase__container">
+          <!-- header -->
+          <div class="showcase__header">
+            <h1>Where Dreams Come Home</h1>
+            <h3>Fulfilling the Dream of Home Since 1906</h3>
+          </div>
+          <!-- filter -->
+          <div class="showcase__filter">
+            <div class="ui accordion">
+              <div class="title">
+                <button class="ui big button btn btn--tertiary btn--extended"><i class="search icon"></i>
+                  Find Your Dream Home</button>
+              </div>
+              <div class="content">
+                <div class="ui grid">
+                  <div class="row">
+                    <div class="sixteen wide mobile eight wide tablet four wide computer column">
+                      <div class="ui fluid selection dropdown">
+                        <input type="hidden" name="state">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">US State</div>
+                        <div class="menu">
+                          <div class="item" data-value="Alabama">
+                            Alabama
+                          </div>
+                          <div class="item" data-value="Alaska">
+                            Alaska
+                          </div>
+                          <div class="item" data-value="Arizona">
+                            Arizona
+                          </div>
+                          <div class="item" data-value="Arkansas">
+                            Arkansas
+                          </div>
+                          <div class="item" data-value="California">
+                            California
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sixteen wide mobile eight wide tablet four wide computer column">
+                      <div class="ui fluid selection dropdown">
+                        <input type="hidden" name="city">
+                        <i class="dropdown icon"></i>
+                        <div class="default text">City</div>
+                        <div class="menu">
+                          <div class="item" data-value="Los Angeles">
+                            Los Angeles
+                          </div>
+                          <div class="item" data-value="San Francisco">
+                            San Francisco
+                          </div>
+                          <div class="item" data-value="San Diego">
+                            San Diego
+                          </div>
+                          <div class="item" data-value="New York">
+                            New York
+                          </div>
+                          <div class="item" data-value="Chicago">
+                            Chicago
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sixteen wide mobile eight wide tablet four wide computer column">
+                      <div class="ui fluid selection dropdown">
+                        <input type="hidden" name="bedrooms">
+                        <i class="dropdown icon"></i>
+                        <div class="default text"># Bedrooms</div>
+                        <div class="menu">
+                          <div class="item" data-value="One">
+                            One
+                          </div>
+                          <div class="item" data-value="Two">
+                            Two
+                          </div>
+                          <div class="item" data-value="Three">
+                            Three
+                          </div>
+                          <div class="item" data-value="Four">
+                            Four
+                          </div>
+                          <div class="item" data-value="Five +">
+                            Five +
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sixteen wide mobile eight wide tablet four wide computer column">
+                      <div class="ui fluid selection dropdown">
+                        <input type="hidden" name="bathrooms">
+                        <i class="dropdown icon"></i>
+                        <div class="default text"># Bathrooms</div>
+                        <div class="menu">
+                          <div class="item" data-value="One">
+                            One
+                          </div>
+                          <div class="item" data-value="Two">
+                            Two
+                          </div>
+                          <div class="item" data-value="Three">
+                            Three
+                          </div>
+                          <div class="item" data-value="Four">
+                            Four
+                          </div>
+                          <div class="item" data-value="Five +">
+                            Five +
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="ui button icon large btn btn--primary btn--filter-find btn--extended"><i
+                    class="ui search icon"></i></button>
+              </div>
+            </div>
+          </div>
+        </div><!-- /container -->
+      </div>
+
+      <div class="gallery">
+        <div class="ui grid container">
+          <div class="row">
+            <div class="sixteen wide mobile eight wide tablet eight wide computer column">
+              <img src="img/house3.jpg" alt="house5" class="ui fluid image">
+            </div>
+            <div class="sixteen wide mobile eight wide tablet eight wide computer column">
+              <img src="img/house1.jpg" alt="house1" class="ui fluid image">
+            </div>
+            <div class="sixteen wide mobile eight wide tablet eight wide computer column">
+              <img src="img/house8.jpg" alt="house8" class="ui fluid image">
+            </div>
+            <div class="sixteen wide mobile eight wide tablet eight wide computer column">
+              <img src="img/house2.jpg" alt="house2" class="ui fluid image">
+            </div>
+          </div>
+          <div class="row">
+            <div class="sixteen wide mobile eight wide tablet four wide computer column">
+              <img src="img/house1.jpg" alt="house1" class="ui fluid image">
+            </div>
+            <div class="sixteen wide mobile eight wide tablet four wide computer column">
+              <img src="img/house2.jpg" alt="house2" class="ui fluid image">
+            </div>
+            <div class="sixteen wide mobile eight wide tablet four wide computer column">
+              <img src="img/house3.jpg" alt="house3" class="ui fluid image">
+            </div>
+            <div class="sixteen wide mobile eight wide tablet four wide computer column">
+              <img src="img/house8.jpg" alt="house8" class="ui fluid image">
+            </div>
+          </div>
         </div>
       </div>
 
@@ -68,6 +224,7 @@
           <a href='https://www.freepik.com/vectors/logo'>Logo vector created by d3images - www.freepik.com</a>
         </div>
       </footer>
+      <!-- !== !== !== -->
     </div> <!-- /content -->
   </div>
 

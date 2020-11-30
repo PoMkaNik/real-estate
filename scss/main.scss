@@ -3,26 +3,91 @@ $secondary-color: #313638;
 $tertiary-color: #f09d51;
 $light-gray: #e8e9eb;
 $medium-gray: #e0dfd5;
-
 $white: $light-gray;
 $black: #000;
+
+$mobile-menu-toggler-size: 20px;
+$mobile-menu-height: calc(#{$mobile-menu-toggler-size} + 15.714px * 2);
 
 * {
   margin: 0;
   padding: 0;
 }
 
+.ui button.btn {
+  text-transform: uppercase;
+  transition: all 0.5s;
+
+  &--extended {
+    @media screen and (max-width: 420px) {
+      width: 100% !important;
+    }
+  }
+
+  &--filter-find {
+    position: absolute;
+    right: 20px;
+    top: 27px;
+
+    font-size: 1.125rem !important;
+    margin-right: 0;
+
+    @media screen and (max-width: 420px) {
+      position: static;
+    }
+  }
+
+  &--primary {
+    &,
+    &:focus {
+      background-color: $primary-color;
+      color: $white;
+    }
+
+    &:hover {
+      background-color: $secondary-color;
+      color: $tertiary-color;
+    }
+  }
+
+  &--secondary {
+    &,
+    &:focus {
+      background-color: $secondary-color;
+      color: $tertiary-color;
+    }
+
+    &:hover {
+      background-color: $primary-color;
+      color: $white;
+    }
+  }
+
+  &--tertiary {
+    &,
+    &:focus {
+      background-color: $tertiary-color;
+      color: $secondary-color;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $secondary-color;
+      color: $tertiary-color;
+    }
+  }
+}
+
+/// MENU
+
 #main-menu,
 #mobile-menu {
   background: rgba($secondary-color, 0.6);
 
-  .item > img {
-    // margin: 0 auto;
-  }
-
   a.item {
     text-transform: uppercase;
     color: $white;
+    transition: all 0.5s;
 
     &:hover {
       color: $tertiary-color;
@@ -34,28 +99,20 @@ $black: #000;
       background-color: $secondary-color;
     }
   }
-
-  button {
-    background-color: $primary-color;
-    color: $white;
-    text-transform: uppercase;
-
-    &:hover {
-      background-color: $secondary-color;
-      color: $tertiary-color;
-    }
-  }
-
-  @media screen and (max-width: 767px) {
-    padding-bottom: 11px;
-  }
 }
 
 #mobile-menu {
   position: fixed;
-  top: 40px;
+  top: $mobile-menu-height;
   border: none;
 }
+
+#mobile-menu-toggler {
+  font-size: $mobile-menu-toggler-size;
+  color: $secondary-color;
+}
+
+/// SHOWCASE
 
 .showcase {
   background-image: url('../img/showcase.jpg');
@@ -65,18 +122,66 @@ $black: #000;
   min-height: 100vh;
   width: 100%;
   position: relative;
+  z-index: 10;
+  transition: background-position 1s;
 
   @media screen and (max-width: 991px) {
     background-position: top left;
   }
 
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+
+  &__outline {
+    position: absolute;
+
+    width: calc((100vw - 1127px) / 2);
+
+    @media screen and (max-width: 1199px) {
+      width: calc((100vw - 933px) / 2);
+    }
+
+    @media screen and (max-width: 991px) {
+      width: calc((100vw - 723px) / 2);
+    }
+
+    @media screen and (max-width: 767px) {
+      visibility: hidden;
+    }
+
+    &--header {
+      height: 138px;
+      top: 25%;
+      right: 0;
+      background: rgba($secondary-color, 0.95);
+    }
+
+    &--filter {
+      height: 164px;
+      top: 70%;
+      left: 0;
+      background: rgba($secondary-color, 0.95);
+
+      @media screen and (max-width: 991px) {
+        height: 213px;
+      }
+    }
+  }
+
   &__header {
     position: absolute;
-    top: 20%;
+    top: 25%;
     right: 0;
     background: rgba($secondary-color, 0.95);
+  }
+
+  &__header {
     padding: 20px;
-    border-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 
     h1 {
       font-size: 48px;
@@ -89,7 +194,7 @@ $black: #000;
       margin-top: 0;
     }
 
-    @media screen and (max-width: 660px) {
+    @media screen and (max-width: 690px) {
       width: 100%;
       text-align: center;
       border-radius: 0;
@@ -97,6 +202,54 @@ $black: #000;
       h1 {
         font-size: 30px;
       }
+    }
+  }
+
+  &__filter {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    width: 100%;
+    height: 164px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: rgba($secondary-color, 0.95);
+
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+    @media screen and (max-width: 991px) {
+      height: 213px;
+    }
+
+    @media screen and (max-width: 767px) {
+      height: auto;
+    }
+
+    @media screen and (max-width: 690px) {
+      border-radius: 0;
+    }
+
+    & .accordion {
+      width: 100%;
+    }
+
+    .column {
+      padding-bottom: 14px;
+    }
+  }
+}
+
+.gallery {
+  padding-top: 40px;
+  background: rgba($medium-gray, 0.9);
+
+  .ui.grid .row {
+    padding: 0;
+
+    .column {
+      padding-bottom: 20px;
     }
   }
 }
