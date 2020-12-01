@@ -4,6 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <!-- semantic ui css -->
   <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
   <!-- custom css -->
@@ -19,7 +24,7 @@
         <nav class="ui secondary top fixed stackable menu" id="main-menu">
           <div class="ui container">
             <div class="item">
-              <img class="ui tiny image" src="img/logo_small.jpg" alt="logo">
+              <img class="ui tiny image" src="img/logo2_small.png" alt="logo">
             </div>
             <div class="right menu">
               <a class="item header active" href="index.html">Home</a>
@@ -38,7 +43,11 @@
     <div class="mobile only row">
       <div class="column">
         <div class="ui secondary top fixed stackable menu">
-          <a id="mobile-menu-toggler" class="item"><i class="bars icon"></i></a>
+          <a id="mobile-menu-toggler" class="item">
+            <span>
+              <i class="bars icon"></i>
+            </span>
+          </a>
         </div>
       </div>
     </div>
@@ -186,11 +195,113 @@
         </div><!-- /container -->
       </div>
 
-      <div class="gallery">
+      <!-- popular houses-->
+      <section class="popular">
+        <h2>Popular & New <span class="primary-text">Dream Houses</span></h2>
+        <div class="ui grid container">
+          <div class="row">
+            <div class="sixteen wide mobile eight wide tablet four wide computer column">
+              <div class="ui fluid card">
+                <div class="image">
+                  <img src="img/house3.jpg" alt="house5" class="ui fluid image">
+                  <a class="ui red ribbon label">Hot</a>
+                </div>
+                <div class="content">
+                  <div class="right floated meta">11/16/2020</div>
+                  <a class="header">Atlanta</a>
+                  <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ea?
+                  </div>
+                </div>
+                <div class="extra content">
+                  <a>
+                    <i class="eye icon"></i>
+                    57 Views
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="sixteen wide mobile eight wide tablet four wide computer column">
+              <div class="ui fluid card">
+                <div class="image">
+                  <img src="img/house1.jpg" alt="house1" class="ui fluid image">
+                  <a class="ui blue ribbon label">Most Viewed</a>
+                </div>
+                <div class="content">
+                  <div class="right floated meta">08/07/2020</div>
+                  <a class="header">Los Angeles</a>
+                  <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ea?
+                  </div>
+                </div>
+                <div class="extra content">
+                  <a>
+                    <i class="eye icon"></i>
+                    202 Views
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="sixteen wide mobile eight wide tablet four wide computer column">
+              <div class="ui fluid card">
+                <div class="image">
+                  <img src="img/house2.jpg" alt="house5" class="ui fluid image">
+                  <a class="ui purple ribbon label">Popular</a>
+                </div>
+                <div class="content">
+                  <div class="right floated meta">9/21/2020</div>
+                  <a class="header">New York</a>
+                  <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ea?
+                  </div>
+                </div>
+                <div class="extra content">
+                  <a>
+                    <i class="eye icon"></i>
+                    126 Views
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="sixteen wide mobile eight wide tablet four wide computer column">
+              <div class="ui fluid card">
+                <div class="image">
+                  <img src="img/house8.jpg" alt="house5" class="ui fluid image">
+                  <a class="ui green ribbon label">New</a>
+                </div>
+                <div class="content">
+                  <div class="right floated meta">12/01/2020</div>
+                  <a class="header">Chicago</a>
+                  <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ea?
+                  </div>
+                </div>
+                <div class="extra content">
+                  <a>
+                    <i class="eye icon"></i>
+                    12 Views
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="center aligned column">
+              <button class="ui big button btn btn--tertiary btn--extended">See all</button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- gallery -->
+
+      <section class="listing">
+        <h2>Real Estate <span class="primary-text">Listing</span></h2>
         <div class="ui grid container">
           <div class="row">
             <div class="sixteen wide mobile eight wide tablet eight wide computer column">
-              <img src="img/house3.jpg" alt="house5" class="ui fluid image">
+              <img src="img/house8.jpg" alt="house5" class="ui fluid image">
             </div>
             <div class="sixteen wide mobile eight wide tablet eight wide computer column">
               <img src="img/house1.jpg" alt="house1" class="ui fluid image">
@@ -216,14 +327,122 @@
               <img src="img/house8.jpg" alt="house8" class="ui fluid image">
             </div>
           </div>
+          <div class="row">
+            <div class="center aligned column">
+              <button class="ui big button btn btn--tertiary btn--extended">See all</button>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <footer>
-        <div class="attribution">
-          <a href='https://www.freepik.com/vectors/logo'>Logo vector created by d3images - www.freepik.com</a>
+      <section class="about">
+        <h2>Why you should <span class="primary-text">choose us</span></h2>
+        <div class="ui grid container">
+          <div class="row">
+            <div class="sixteen wide mobile eight wide tablet four wide computer column">
+              <div class="ui padded segment">
+                <h3 class="ui center aligned icon header">
+                  <i class="circular history icon"></i>
+                  Since 1906
+                </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nulla, ut aspernatur magnam laboriosam
+                  aliquam!</p>
+              </div>
+            </div>
+            <div class="sixteen wide mobile eight wide tablet four wide computer column">
+              <div class="ui padded segment">
+                <h3 class="ui center aligned icon header">
+                  <i class="circular certificate icon"></i>
+                  Certified
+                </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nulla, ut aspernatur magnam laboriosam
+                  aliquam!</p>
+              </div>
+            </div>
+            <div class="sixteen wide mobile eight wide tablet four wide computer column">
+              <div class="ui padded segment">
+                <h3 class="ui center aligned icon header">
+                  <i class="circular star icon"></i>
+                  Top Rated
+                </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nulla, ut aspernatur magnam laboriosam
+                  aliquam!</p>
+              </div>
+            </div>
+            <div class="sixteen wide mobile eight wide tablet four wide computer column">
+              <div class="ui padded segment">
+                <h3 class="ui center aligned icon header">
+                  <i class="circular globe icon"></i>
+                  Worldwide
+                </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nulla, ut aspernatur magnam laboriosam
+                  aliquam!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="center aligned column">
+              <button class="ui big button btn btn--tertiary btn--extended">Read more</button>
+            </div>
+          </div>
         </div>
-      </footer>
+      </section>
+
+      <section class="contact-us">
+        <h2>Contact Us On <span class="primary-text">Any Question</span></h2>
+        <form class="ui huge form">
+          <div class="ui grid container">
+            <div class="row">
+              <div class="sixteen wide mobile eight wide tablet eight wide computer column">
+                <div class="field">
+                  <label>First Name</label>
+                  <input type="text" name="first-name" placeholder="First Name">
+                </div>
+                <div class="field">
+                  <label>Last Name</label>
+                  <input type="text" name="last-name" placeholder="Last Name">
+                </div>
+                <div class="field">
+                  <label>Email</label>
+                  <input type="email" name="email" placeholder="Best email">
+                </div>
+                <div class="field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" class="hidden">
+                    <label>I agree to the Terms and Conditions</label>
+                  </div>
+                </div>
+              </div>
+              <div class="sixteen wide mobile eight wide tablet eight wide computer column">
+                <div class="field">
+                  <label>Text</label>
+                  <textarea></textarea>
+                </div>
+                <button class="ui large button btn btn--extended btn--tertiary" type="submit">Submit</button>
+              </div>
+            </div>
+          </div>
+        </form>
+
+      </section>
+
+      <!-- footer -->
+
+      <section class="footer ui inverted vertical footer segment">
+        <div class="ui center aligned container">
+          <div class="ui stackable inverted grid">
+            <div class="eight wide column">
+              <h3 class="primary-text">Real Estate &copy; 2020</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quibusdam doloribus debitis quis
+                nam harum dolorem, ipsum nobis consequuntur ex?</p>
+            </div>
+            <div class="eight wide column">
+              <img src="img/logo2_white.jpg" class="ui centered small image">
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- !== !== !== -->
     </div> <!-- /content -->
   </div>
